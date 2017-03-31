@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.seckill.dao.root.dao.TsucceedSeckillMapper">
-  <resultMap id="BaseResultMap" type="org.seckill.dao.root.iface.TsucceedSeckill">
+<mapper namespace="org.seckill.dao.root.iface.TsucceedSeckillMapper">
+  <resultMap id="BaseResultMap" type="org.seckill.dao.root.dao.TsucceedSeckill">
     <id column="seckill_id" jdbcType="BIGINT" property="seckillId" />
     <id column="mobile" jdbcType="VARCHAR" property="mobile" />
     <result column="seckill_time" jdbcType="TIMESTAMP" property="seckillTime" />
@@ -10,25 +10,25 @@
   <sql id="Base_Column_List">
     seckill_id, mobile, seckill_time, create_time
   </sql>
-  <select id="selectByPrimaryKey" parameterType="org.seckill.dao.root.iface.TsucceedSeckillKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="org.seckill.dao.root.dao.TsucceedSeckillKey" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from tsucceed_seckill
     where seckill_id = #{seckillId,jdbcType=BIGINT}
       and mobile = #{mobile,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="org.seckill.dao.root.iface.TsucceedSeckillKey">
+  <delete id="deleteByPrimaryKey" parameterType="org.seckill.dao.root.dao.TsucceedSeckillKey">
     delete from tsucceed_seckill
     where seckill_id = #{seckillId,jdbcType=BIGINT}
       and mobile = #{mobile,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="org.seckill.dao.root.iface.TsucceedSeckill">
+  <insert id="insert" parameterType="org.seckill.dao.root.dao.TsucceedSeckill">
     insert into tsucceed_seckill (seckill_id, mobile, seckill_time, 
       create_time)
     values (#{seckillId,jdbcType=BIGINT}, #{mobile,jdbcType=VARCHAR}, #{seckillTime,jdbcType=TIMESTAMP}, 
       #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="org.seckill.dao.root.iface.TsucceedSeckill">
+  <insert id="insertSelective" parameterType="org.seckill.dao.root.dao.TsucceedSeckill">
     insert into tsucceed_seckill
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="seckillId != null">
@@ -59,7 +59,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.seckill.dao.root.iface.TsucceedSeckill">
+  <update id="updateByPrimaryKeySelective" parameterType="org.seckill.dao.root.dao.TsucceedSeckill">
     update tsucceed_seckill
     <set>
       <if test="seckillTime != null">
@@ -72,7 +72,7 @@
     where seckill_id = #{seckillId,jdbcType=BIGINT}
       and mobile = #{mobile,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.seckill.dao.root.iface.TsucceedSeckill">
+  <update id="updateByPrimaryKey" parameterType="org.seckill.dao.root.dao.TsucceedSeckill">
     update tsucceed_seckill
     set seckill_time = #{seckillTime,jdbcType=TIMESTAMP},
       create_time = #{createTime,jdbcType=TIMESTAMP}

@@ -1,7 +1,7 @@
-package org.seckill.dao.root.dao;
+package org.seckill.dao.root.iface;
 
-import org.seckill.dao.root.iface.TsucceedSeckill;
-import org.seckill.dao.root.iface.TsucceedSeckillKey;
+import org.seckill.dao.root.dao.TsucceedSeckill;
+import org.seckill.dao.root.dao.TsucceedSeckillKey;
 
 public interface TsucceedSeckillMapper {
     int deleteByPrimaryKey(TsucceedSeckillKey key);

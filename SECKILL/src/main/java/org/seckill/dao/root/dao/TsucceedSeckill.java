@@ -1,4 +1,4 @@
-package org.seckill.dao.root.iface;
+package org.seckill.dao.root.dao;
 
 import java.util.Date;
 
@@ -21,13 +21,5 @@ public class TsucceedSeckill extends TsucceedSeckillKey {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    @Override
-    public String toString() {
-        return "TsucceedSeckill{" +
-                "seckillTime=" + seckillTime +
-                ", createTime=" + createTime +
-                '}';
     }
 }

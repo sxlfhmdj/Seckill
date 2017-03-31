@@ -16,7 +16,7 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- 生成模型的包名和位置 -->
-        <javaModelGenerator targetPackage="org.seckill.dao.root.iface" targetProject="C:\Users\sxlfh\IdeaProjects\SECKILL\src\main\java">
+        <javaModelGenerator targetPackage="org.seckill.dao.root.dao" targetProject="C:\Users\sxlfh\IdeaProjects\SECKILL\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
@@ -25,11 +25,11 @@
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="org.seckill.dao.root.dao" targetProject="C:\Users\sxlfh\IdeaProjects\SECKILL\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.seckill.dao.root.iface" targetProject="C:\Users\sxlfh\IdeaProjects\SECKILL\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-        <table tableName="tsucceed_seckill" domainObjectName="TsucceedSeckill" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+        <table tableName="tseckill" domainObjectName="Tseckill" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
         <!-- <table tableName="course_info" domainObjectName="CourseInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
         <table tableName="course_user_info" domainObjectName="CourseUserInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
     </context>

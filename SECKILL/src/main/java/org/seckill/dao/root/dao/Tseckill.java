@@ -1,4 +1,4 @@
-package org.seckill.dao.root.iface;
+package org.seckill.dao.root.dao;
 
 import java.util.Date;
 

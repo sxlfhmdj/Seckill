@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.seckill.dao.root.dao.TseckillMapper">
-  <resultMap id="BaseResultMap" type="org.seckill.dao.root.iface.Tseckill">
+<mapper namespace="org.seckill.dao.root.iface.TseckillMapper">
+  <resultMap id="BaseResultMap" type="org.seckill.dao.root.dao.Tseckill">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="num" jdbcType="BIGINT" property="num" />
@@ -22,7 +22,7 @@
     delete from tseckill
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="org.seckill.dao.root.iface.Tseckill">
+  <insert id="insert" parameterType="org.seckill.dao.root.dao.Tseckill">
     insert into tseckill (id, name, num, 
       start_time, end_time, create_time
       )
@@ -30,7 +30,7 @@
       #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="org.seckill.dao.root.iface.Tseckill">
+  <insert id="insertSelective" parameterType="org.seckill.dao.root.dao.Tseckill">
     insert into tseckill
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.seckill.dao.root.iface.Tseckill">
+  <update id="updateByPrimaryKeySelective" parameterType="org.seckill.dao.root.dao.Tseckill">
     update tseckill
     <set>
       <if test="name != null">
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.seckill.dao.root.iface.Tseckill">
+  <update id="updateByPrimaryKey" parameterType="org.seckill.dao.root.dao.Tseckill">
     update tseckill
     set name = #{name,jdbcType=VARCHAR},
       num = #{num,jdbcType=BIGINT},

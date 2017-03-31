@@ -1,4 +1,4 @@
-package org.seckill.dao.root.iface;
+package org.seckill.dao.root.dao;
 
 public class TsucceedSeckillKey {
     private Long seckillId;

@@ -1,6 +1,6 @@
-package org.seckill.dao.root.dao;
+package org.seckill.dao.root.iface;
 
-import org.seckill.dao.root.iface.Tseckill;
+import org.seckill.dao.root.dao.Tseckill;
 
 public interface TseckillMapper {
     int deleteByPrimaryKey(Long id);
