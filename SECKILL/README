@@ -1,0 +1,6 @@
+
+通过Mybatis Generator自动生成的DAO和XML、可以配置生成Example。
+应用Mybatis的目的就是可以灵活的发挥程序员编写SQL的能力，更好的控制sql语句，可以对sql进行优化，从而提高程序性能。
+
+Spring的官方文档地址:
+http://docs.spring.io/spring/docs/
